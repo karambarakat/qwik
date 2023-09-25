@@ -1,8 +1,7 @@
 import { component$, useSignal, $ } from "@builder.io/qwik";
-import styles from "./counter.module.css";
 import Gauge from "../gauge";
 
-export default component$((props: { initialValue: number }) => {
+const Component = component$((props: { initialValue: number }) => {
   const count = useSignal(props.initialValue || 99);
 
   const setCount = $((newValue: number) => {
@@ -16,17 +15,19 @@ export default component$((props: { initialValue: number }) => {
   });
 
   return (
-    <div class={styles.wrapper}>
-      <button class={styles.button} onClick$={() => setCount(count.value - 1)}>
+    <div class="flex items-center justify-center gap-5">
+      <button class={"button"} onClick$={() => setCount(count.value - 1)}>
         -
       </button>
       <Gauge value={count.value} />
-      <button class={styles.button} onClick$={() => setCount(count.value + 1)}>
+      <button class={"button"} onClick$={() => setCount(count.value + 1)}>
         +
       </button>
     </div>
   );
 });
+
+export default Component;
 
 export const celebrate = $(async () => {
   const defaults = {

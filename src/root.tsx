@@ -1,4 +1,7 @@
 import { component$ } from "@builder.io/qwik";
+import "virtual:uno.css";
+import "@unocss/reset/tailwind-compat.css";
+import "./reset.css";
 import {
   QwikCityProvider,
   RouterOutlet,

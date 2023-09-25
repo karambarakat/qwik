@@ -4,10 +4,10 @@ import styles from "./header.module.css";
 
 export default component$(() => {
   return (
-    <header class={styles.header}>
-      <div class={styles.wrapper}>
-        <div class={styles.logo}>
-          <a href="/" title="qwik">
+    <header class={[styles.header, "[& ul]:m-0"]}>
+      <div class="flex items-center justify-between banner">
+        <div class={"inline-block"}>
+          <a class="block" href="/" title="qwik">
             <QwikLogo height={50} width={143} />
           </a>
         </div>

@@ -113,20 +113,6 @@ ul {
   padding-left: 20px;
 }
 
-/* Custom Builder CSS Class ----------------------------------------- 
-  This is just an example of setting a custom CSS class on a Builder component,
-  then applying styles to it here in the global CSS file.
-*/
-.builder-footer a {
-  color: var(--text-color);
-  text-decoration: none;
-}
-
-.builder-footer a:hover {
-  color: var(--qwik-light-blue);
-  text-decoration: underline;
-}
-
 /**
  * WHAT IS THIS FILE?
  *
